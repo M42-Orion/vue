@@ -5,8 +5,6 @@ new Vue({
     data:{
         name:"hello world",
         job:"debug",
-        web:"https://m42-orion.github.io/index.html",
-        website:"<a href='https://m42-orion.github.io/index.html'>博客</a>"
     },
     methods: {
         greet: function(){
