@@ -23,4 +23,5 @@ new Vue({
 el: Element需要获取的元素，一定是html中的根容器元素
 data: 用于存储数据
 methods:用于存储各种方法
+data-binding:给属性绑定对应的值
 */
