@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue.js-键盘事件及其修饰符</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../node_modules/vue/dist/vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- vue-app是根容器 -->
+    <div id="vue-app">
+        <h1>键盘 Events</h1>
+        <label for="">姓名：</label>
+        <input type="text" v-on:keyup.enter = "logName()">
+        <label for="">年龄</label>
+        <input type="text" v-on:keyup.alt.enter = "logAge()">
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
