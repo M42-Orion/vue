@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../node_modules/vue/dist/vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- vue-app是根容器 -->
+    <div id="vue-app">
+        <!-- 只允许运行一次 -->
+        <button v-on:click.once="add(1)">涨一岁</button>
+        <button v-on:click="subtract(1)">减一岁</button>
+        <button @dblclick="add(10)">涨十岁</button>
+        <button @dblclick="subtract(10)">减十岁</button>
+        <p>My age is {{age}}</p>
+        <div id="canvas" v-on:mousemove="updateXY">{{X}},{{Y}}
+            <span v-on:mousemove.stop>stop moveing </span>
+            <!-- 阻止事件 -->
+        </div>
+        <!-- 阻止单击事件 -->
+        <a href="https://www.baidu.com/" v-on:click.prevent="alert()">the new step</a>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
