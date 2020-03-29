@@ -16,7 +16,9 @@
         <h1>键盘 Events</h1>
         <label for="">姓名：</label>
         <input type="text" v-on:keyup.enter = "logName()">
+        <!-- 只有触发enter键才能够有反应 -->
         <label for="">年龄</label>
+        <!-- 两个键才能够触发 -->
         <input type="text" v-on:keyup.alt.enter = "logAge()">
     </div>
     <script src="app.js"></script>
