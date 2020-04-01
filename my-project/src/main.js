@@ -7,7 +7,12 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
+  // 控制容器是谁
   el: '#app',
+  // 组件
   components: { App },
+  // 模板
   template: '<App/>'
 })
+
+// index.html -> main.js --> App.vue
