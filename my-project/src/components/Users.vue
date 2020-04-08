@@ -7,21 +7,31 @@
         <h3 v-show="user.show">{{user.position}}</h3>
       </li>
     </ul>
+    <button v-on:click = "deleteUser">删除</button>
   </div>
 </template>
+// 传值：strin number boolean
+// 引用：array object
 
 <script>
 export default {
   name: "users",
+  props:{
+      users:{
+          type:Array,
+          required:true
+      }
+  },
   data() {
     return {
-      users: [
-        { name: "Henry", position: "web开发", show: false },
-        { name: "Bucky", position: "web开发", show: false },
-        { name: "Emily", position: "web开发", show: true }
-      ]
+      
     };
-  }
+  },
+  methods: { 
+    deleteUser:function (){
+      this.users.pop();
+    }
+   }
 };
 </script>
 

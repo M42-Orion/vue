@@ -1,6 +1,6 @@
 <template>
   <footer>
-      <p>{{copyright}}</p>
+      <p>{{copyright}}{{title}}</p>
   </footer>
   </div>
 </template>
@@ -8,6 +8,11 @@
 <script>
 export default {
   name: 'app-footer',
+  props: { 
+    title:{
+      type: String
+    }
+     },
   data () {
     return {
         copyright:"copyrigth 2017 Vue Demo"

@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <app-header></app-header>
-    <h1>{{title}}</h1>
-    <users></users>
-    <app-footer></app-footer>
+    <app-header v-bind:title="title"></app-header>
+    <!-- <h1>{{title}}</h1> -->
+    <users v-bind:users="users"></users>
+    <users v-bind:users="users"></users>
+
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -18,7 +20,13 @@ export default {
   name: "app",
   data() {
     return {
-      title: "这是我的第一个vue脚手架项目！"
+      // title: "这是我的第一个vue脚手架项目！"
+      users: [
+        { name: "Henry", position: "web开发", show: false },
+        { name: "Bucky", position: "web开发", show: false },
+        { name: "Emily", position: "web开发", show: true }
+      ],
+      title:"传递的是一个值"
     };
   },
   components: {
