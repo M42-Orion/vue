@@ -23,7 +23,32 @@ export default {
       // this.title = "change"
       this.$emit("titlechanged","子向父组件传值")//子组件这里注册一个方法
     }
+  },
+  beforeCreate:function () {
+    alert("组件实例化之前执行的函数,beforeCreate");
+  },
+  created:function() {
+    alert("组件实例化完毕，页面还未显示,created");
+  },
+  beforeMount:function(){
+    alert("组件挂载前，页面仍未展示，但是虚拟demo已经配置完,beforeMount");
+  },
+  mounted:function(){
+    alert("此方法执行后，页面显示,mounted");
+  },
+  beforeUpdate:function(){
+    alert("组件更新前，页面仍未更新，但是虚拟dom已经配置,beforeUpdate");
+  },
+  updated:function(){
+    alert("组件更新，此方法执行后，页面显示,updated");
+  },
+  beforeDestroy:function(){
+    alert("组件销毁前,beforeDestroy");
+  },
+  destroyed:function(){
+    alert("组件销毁前,destroyed");
   }
+
 }
 </script>
 
