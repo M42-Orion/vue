@@ -20,7 +20,8 @@ export default {
   },
   methods:{
     change:function (){
-      this.title = "change"
+      // this.title = "change"
+      this.$emit("titlechanged","子向父组件传值")//子组件这里注册一个方法
     }
   }
 }

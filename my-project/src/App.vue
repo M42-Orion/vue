@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-on:titlechanged = "titlechanged($event)" v-bind:title="title"></app-header>/
+    <!-- 父组件titlechanged($event)接收方法传递过来的值 -->
     <!-- <h1>{{title}}</h1> -->
     <users v-bind:users="users"></users>
     <users v-bind:users="users"></users>
@@ -28,6 +29,12 @@ export default {
       ],
       title:"传递的是一个值"
     };
+  },
+  methods: {
+    titlechanged:function(title){
+      // 父组件利用传递过来的值对变量进行修改
+      this.title = title;
+    }
   },
   components: {
     // 起名字不能跟系统标签冲突
